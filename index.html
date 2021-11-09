@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="imgs/bookmark-icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!------------------- HEADER ---------------------------------->
+    <section id="header">
+        <a href="#data" class="down"><i class="fas fa-chevron-down"></i></a>
+        <div id="btnUp"> <a href="#header" class="up"><i class="fas fa-angle-up"></i></a></div>
+        <div class="container">
+            <div class="main-header py-4 w-50 m-auto">
+                <div class="title mb-5 text-center">
+                    <h1>Bookmarker</h1>
+                    <h4>Bookmark your favorite sites</h4>
+                </div>
+                <div class="form mb-5 w-75 m-auto">
+                    <div class="form-group mb-3">
+                        <label for="siteName">Site Name <span>*</span></label>
+                        <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name">
+                        <small class="nameAlert d-none">BookmarkName must start with capital letter, contains 3:10
+                            characters</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="siteUrl">Site URL <span>*</span></label>
+                        <input type="text" class="form-control" id="siteUrl" placeholder="Bookmark URL">
+                        <small class="urlAlert d-none">Bookmark URL must start with: (www.), then any char and ends with
+                            (.com, .org or .net)</small>
+                    </div>
+                </div>
+                <div class="emptyInputs text-center">
+                    <small class="empty-alert d-none"></small>
+                </div>
+                <div class="addBtn text-center">
+                    <a href="" id="add">Add Bookmark</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------- DATA ---------------------------------->
+    <section id='data' class="py-5">
+        <div class="container">
+            <div class="data w-75 m-auto text-center">
+                <div class="search my-5">
+                    <input type="search" class="form-control m-auto w-50" id="search" placeholder="Search...">
+                </div>
+                <div class="site-data">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------- FOOTER ---------------------------------->
+    <section id="footer" class="py-3 mt-5 container">
+        <div class="footer text-center">
+            <p>CopyRight © 2021 <span>Bookmarker</span> </p>
+        </div>
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

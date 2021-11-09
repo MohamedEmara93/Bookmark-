@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/***************************** HEADER ********************************************/
+#header{
+    height: 90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    color: ghostwhite;
+    position: relative;
+}
+
+#header a{
+    font-size: 1.5rem;
+    color: ghostwhite;
+    background-color: #fc46cf;
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+}
+
+#header a:hover{
+    color: #fc46cf;
+    background-color: #ccc;
+}
+
+#header .down{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#header .up{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 50%;
+}
+
+#btnUp{
+    display: none;
+}
+
+h1{
+    font-family: 'Cookie', cursive;
+    font-size: 4rem;
+    color: #fc46cf;
+}
+
+.main-header{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header .form small, .main-header span{
+    color: red; 
+}
+
+.main-header .form small{
+    margin-top: 4px;
+}
+
+.emptyInputs{
+    margin-bottom: 10px;
+}
+
+.empty-alert{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.main-header a{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-header a{   
+    background-color: #fc46cf;
+    color: ghostwhite;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 1.1rem !important;
+    transition:  all .3s ease-in-out;
+}
+
+.main-header a:hover {
+    background-color: ghostwhite;
+    color: #fc46cf;
+}
+/***************************** DATA ********************************************/
+.data .site-item{
+    border: 1px solid #ccc;
+    padding: 8px 6px;
+    width: max-content;
+}
+
+.data .site-data .visit a{
+    text-decoration: none;
+    color: #fc46cf;
+    transition: color .3s ease-in-out;
+}
+
+.data .site-data .visit:hover a{
+    color: #fff;
+}
+
+.data button{
+    position: relative;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.data button:hover{
+    background-color: ghostwhite;
+}
+
+.visit, .edit, .delete{
+    background-color: #fff;
+}
+
+.visit{
+    color: #fc46cf;
+    border: 1px solid #fc46cf;
+    margin-left: 5rem;
+}
+
+.visit:hover{
+    color: #fff;
+}
+
+.edit{
+    border: 1px solid #1ea11efc;
+}
+
+.edit a{
+    text-decoration: none;
+    color: #1ea11efc;
+}
+
+.edit:hover a{
+    color: #fff;
+}
+
+.delete{
+    color: #000;
+    border: 1px solid #000;
+}
+
+.delete:hover{
+    color: #fff;
+}
+
+.visit::before, .edit::before, .delete::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+
+.visit:hover:before, .edit:hover:before, .delete:hover:before{
+    transform: translateX(0);
+}
+
+.visit::before{
+    background-color: #fc46cf;
+}
+.edit::before{
+    background-color: #1ea11efc;
+}
+.delete::before{
+    background-color: black;
+}
+
+@media (max-width: 700px){
+    .data .site-item{
+        flex-direction: column;
+    }
+    .data .btns{
+        display: flex;
+    }
+    .data .btn{
+        margin-left: 4px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1000px){
+    .data .site-item{
+        width: 75%;
+    }
+    .data .btns{
+        display: flex;
+    }
+}
+/***************************** FOOTER ********************************************/
+#footer{
+    border-top: 1px solid #fc46cf;
+}
+
+#footer span{
+    color: #fc46cf;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
